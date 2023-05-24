@@ -25,6 +25,7 @@ const Page = () => {
       doLogin(json.token, rememberPassword);
       window.location.href = '/';
     }
+    setDisable(false);
   };
 
   return (
@@ -51,7 +52,7 @@ const Page = () => {
             <div className="area--title">Senha</div>
             <div className="area--input">
               <input 
-              type="passowrd" 
+              type="password" 
               disabled={disable}
               value={password}
               onChange={e=>setPassword(e.target.value)}
